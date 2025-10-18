@@ -5,41 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <div class="weather-app">
-    <div class="weather-container">
+    <div class="weather-card">
+
+      <!-- Search Section -->
+      <div class="search-box">
+        <input id="input" type="text" placeholder="Enter city name">
+        <button id="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+      <!-- Location Button -->
+      <button id="getlocation" class="location-btn"><i class="fa-solid fa-location-dot"></i> My Location</button>
 
       <!-- Weather Info -->
-      <div class="weather-information">
-        <h1 id="temp" class="temp">--°C</h1>
-        <h2 id="city-name" class="city">City</h2>
-        <h4 id="date-time" class="time">--</h4>
-        <img id="icon" class="icon" alt="Weather Icon">
-        <h3 id="condition2" class="condition">--</h3>
-      </div>
-
-      <!-- Weather Controls -->
-      <div class="weather-suggestions">
-        <input id="input" class="input" type="text" placeholder="Enter city name">
-        <button id="btn" class="search"><i class="fa fa-search"></i></button>
-        <button id="getlocation" class="location"><i class="fa fa-location-arrow"></i> My Location</button>
-        
-        <div class="preset-cities">
-          <span class="city">London</span>
-          <span class="city">Kabul</span>
-          <span class="city">Ottawa</span>
-          <span class="city">California</span>
+      <div class="weather-info">
+        <div class="temp-city">
+          <h1 id="temp">--°C</h1>
+          <h2 id="city-name">City</h2>
         </div>
-
-        <h3 class="weather-de">Weather Details</h3>
-        <div class="weather-details">
-          <div class="row"><p>Country</p><span id="country">--</span></div>
-          <div class="row"><p>Humidity</p><span id="humidity">--</span></div>
+        <h4 id="date-time">--</h4>
+        <div class="condition">
+          <img id="icon" src="" alt="icon">
+          <span id="condition2">--</span>
         </div>
       </div>
 
+      <!-- Weather Details -->
+      <div class="weather-details">
+        <div class="detail-row"><span>Country:</span> <span id="country">--</span></div>
+        <div class="detail-row"><span>Humidity:</span> <span id="humidity">--</span></div>
+        <div class="detail-row"><span>Wind:</span> <span id="wind">--</span></div>
+      </div>
+
+      <!-- Preset Cities -->
+      <div class="preset-cities">
+        <span class="city">London</span>
+        <span class="city">New York</span>
+        <span class="city">Tokyo</span>
+        <span class="city">Sydney</span>
+      </div>
     </div>
   </div>
 
