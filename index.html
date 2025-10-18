@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App With JavaScript</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="weather-app">
-    <div class="weather-card">
+    <div class="container">
+        <div class="header">
+            <div class="search-box">
+                <input type="text" placeholder="Enter your location" class="input-box">
 
-      <!-- Search Section -->
-      <div class="search-box">
-        <input id="input" type="text" placeholder="Enter city name">
-        <button id="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-      </div>
-
-      <!-- Location Button -->
-      <button id="getlocation" class="location-btn"><i class="fa-solid fa-location-dot"></i> My Location</button>
-
-      <!-- Weather Info -->
-      <div class="weather-info">
-        <div class="temp-city">
-          <h1 id="temp">--°C</h1>
-          <h2 id="city-name">City</h2>
+                <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
+            </div>
         </div>
-        <h4 id="date-time">--</h4>
-        <div class="condition">
-          <img id="icon" src="" alt="icon">
-          <span id="condition2">--</span>
+
+        <div class="location-not-found">
+            <h1>Sorry, Location not found!!!</h1>
+            <img src="/assets/404.png" alt="404 Error">
         </div>
-      </div>
 
-      <!-- Weather Details -->
-      <div class="weather-details">
-        <div class="detail-row"><span>Country:</span> <span id="country">--</span></div>
-        <div class="detail-row"><span>Humidity:</span> <span id="humidity">--</span></div>
-        <div class="detail-row"><span>Wind:</span> <span id="wind">--</span></div>
-      </div>
+        <div class="weather-body">
+            <img src="/assets/cloud.png" alt="Weather Image" class="weather-img">
 
-      <!-- Preset Cities -->
-      <div class="preset-cities">
-        <span class="city">London</span>
-        <span class="city">New York</span>
-        <span class="city">Tokyo</span>
-        <span class="city">Sydney</span>
-      </div>
+            <div class="weather-box">
+                <p class="temperature">0 <sup>°C</sup></p>
+                <p class="description">light rain</p>
+            </div>
+
+            <div class="weather-details">
+                <div class="humidity">
+                    <i class="fa-sharp fa-solid fa-droplet"></i>
+                    <div class="text">
+                        <span id="humidity">45%</span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+
+                <div class="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="text">
+                        <span id="wind-speed">12Km/H</span>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/595a890311.js" crossorigin="anonymous"></script>
 </body>
 </html>
